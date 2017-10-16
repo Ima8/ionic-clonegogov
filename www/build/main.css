@@ -25511,3 +25511,56 @@ ion-navbar.toolbar {
   height: calc(46px + constant(safe-area-inset-top));
   min-height: calc(46px + constant(safe-area-inset-top));
 }
+
+page-home #logo {
+  width: 65%;
+  position: absolute;
+  top: 17%;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+page-home #main-content {
+  background-color: #C31432;
+}
+
+page-home .btn-row-1 {
+  width: 100%;
+  text-transform: none;
+  border-color: #FFF;
+  border-width: 100px;
+  background-color: #FFF;
+  color: black;
+}
+
+page-home .btn-row-2 {
+  width: 100%;
+  text-transform: none;
+  background: transparent !important;
+  border-color: #FFF;
+  border-width: 100px;
+}
+
+page-home #row-slide {
+  margin-top: 300px;
+  margin-bottom: 120px;
+}
+
+page-home .row-btn {
+  margin-top: 10px;
+  margin: 0 auto;
+}
+
+page-home .no-scroll .scroll-content {
+  overflow: hidden;
+}
+
+page-home .slide {
+  margin-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 25px;
+  font-weight: bold;
+  color: #FFF;
+}

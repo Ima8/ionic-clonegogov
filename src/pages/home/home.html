@@ -1,18 +1,45 @@
-<ion-header>
+<!-- <ion-header>
   <ion-navbar>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>Home</ion-title>
   </ion-navbar>
-</ion-header>
+</ion-header> -->
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+<ion-content class="no-scroll" padding id="main-content">
+    <ion-row>
+        <img id="logo" src="../../assets/img/ninjavan-logo-print.png">
+    </ion-row>
+    <ion-row id="row-slide">
+        <ion-slides autoplay="500" loop="true" speed="2000">
+            <ion-slide class="slide">
+                <p> We deliver to anywhere in Thailand </p>
+            </ion-slide>
+            <ion-slide class="slide">
+                <p> We bring the post officce to you </p>
+            </ion-slide>
+            <ion-slide class="slide">
+                <p> No minimum parcels per pickup </p>
+            </ion-slide>
+        </ion-slides>
+    </ion-row>
+    <ion-row text-center class="row-btn">
+        <ion-col>
+            <button ion-button icon-left class="btn-row-1">
+                  <ion-icon name="md-locate"></ion-icon>
+                  Set your pickup address to start
+          </button>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
+        </ion-col>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+    </ion-row>
+    <ion-row text-center class="row-btn">
+        <ion-col>
+            <button class="btn-row-2" ion-button block>
+            <p style="">Register/Login</p>
+            </button>
+        </ion-col>
+    </ion-row>
+
 </ion-content>
