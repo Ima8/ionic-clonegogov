@@ -7,12 +7,40 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>pickup</ion-title>
+    <ion-title>ตั้งค่า สถานที่เข้ารับพัสดุ</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
+  <ion-row>
+    <ion-img width="100%" height="380px" src="../../assets/img/map.jpg"></ion-img>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-icon name="ios-alert-outline"></ion-icon>
+      ข้อมูลเพิ่มเติม
+    </ion-col>
+    <ion-col></ion-col>
+    <ion-col>
+      <ion-icon name="ios-barcode-outline"></ion-icon>
+      ที่อยู่จัดส่งผิด?
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-list>
 
+      <ion-item >
+        <ion-label floating>ชั้น/เลขชั้น</ion-label>
+        <ion-input type="text" value="" fullwidth></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>ข้อมูลเพิ่มเติม/หมายเหตุที่อยู่</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+    </ion-list>
+  </ion-row>
 </ion-content>

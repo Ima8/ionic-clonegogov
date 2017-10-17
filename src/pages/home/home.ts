@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { PickupPage } from '../pickup/pickup'
 
 @Component({
   selector: 'page-home',
@@ -12,6 +13,6 @@ export class HomePage {
   }
 
   gotoPickup(){
-
+    this.navCtrl.push(PickupPage);
   }
 }
