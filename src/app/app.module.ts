@@ -16,11 +16,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     HomePage,
     ListPage,
-<<<<<<< HEAD
     PickupPage
-=======
     HistoryPage
->>>>>>> 79b69c0016e1e38198787cf324f444e894d88232
   ],
   imports: [
     BrowserModule,
@@ -31,11 +28,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     HomePage,
     ListPage,
-<<<<<<< HEAD
     PickupPage
-=======
     HistoryPage
->>>>>>> 79b69c0016e1e38198787cf324f444e894d88232
   ],
   providers: [
     StatusBar,
