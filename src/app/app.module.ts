@@ -16,7 +16,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     HomePage,
     ListPage,
-    PickupPage
+    PickupPage,
     HistoryPage
   ],
   imports: [
@@ -28,7 +28,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     HomePage,
     ListPage,
-    PickupPage
+    PickupPage,
     HistoryPage
   ],
   providers: [
