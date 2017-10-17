@@ -10,7 +10,7 @@ import { ActivePage } from './../pages/active/active';
 import { CompletePage } from './../pages/complete/complete';
 import { CancelPage } from './../pages/cancel/cancel';
 
-import { PickupPage } from '../pages/pickup/pickup'
+import { PickupPage } from './../pages/pickup/pickup'
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -21,8 +21,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ListPage,
     ActivePage,
     CompletePage,
-    CancelPage
-    PickupPage,
+    CancelPage,
+    PickupPage
 
   ],
   imports: [
@@ -36,9 +36,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ListPage,
     ActivePage,
     CompletePage,
-    CancelPage
-    PickupPage,
-    HistoryPage
+    CancelPage,
+    PickupPage
   ],
   providers: [
     StatusBar,
