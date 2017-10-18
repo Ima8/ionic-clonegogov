@@ -24,22 +24,27 @@
             </ion-slide>
         </ion-slides>
     </ion-row>
-    <ion-row text-center class="row-btn" (click)="gotoPickup()">
-        <ion-col>
-            <button ion-button icon-left class="btn-row-1">
-                  <ion-icon name="md-locate"></ion-icon>
-                  Set your pickup address to start
-          </button>
 
-        </ion-col>
-
-    </ion-row>
-    <ion-row text-center class="row-btn">
-        <ion-col>
-            <button class="btn-row-2" ion-button block>
-            <p style="">Register/Login</p>
-            </button>
-        </ion-col>
-    </ion-row>
 
 </ion-content>
+<ion-footer style="background-color: #C31432;">
+    <ion-toolbar style="background-color: #C31432;">
+        <ion-row text-center class="row-btn" (click)="gotoPickup()">
+            <ion-col>
+                <button ion-button icon-left class="btn-row-1">
+                <ion-icon name="md-locate"></ion-icon>
+                Set your pickup address to start
+        </button>
+
+            </ion-col>
+
+        </ion-row>
+        <ion-row text-center class="row-btn" (click)="alertReg()">
+            <ion-col>
+                <button class="btn-row-2" ion-button block>
+          <p>Register/Login</p>
+          </button>
+            </ion-col>
+        </ion-row>
+    </ion-toolbar>
+</ion-footer>
