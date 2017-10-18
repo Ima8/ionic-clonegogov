@@ -8,6 +8,7 @@ import { ListPage } from '../pages/list/list';
 import { ActivePage } from './../pages/active/active';
 import { CompletePage } from './../pages/complete/complete';
 import { CancelPage } from './../pages/cancel/cancel';
+import { PickupPage } from '../pages/pickup/pickup'
 @Component({
   templateUrl: 'app.html'
 })
@@ -24,7 +25,7 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage },
+      { title: 'Pickup', component: PickupPage },
       { title: 'Active', component: ActivePage },
       { title: 'Complete', component: CompletePage },
       { title: 'Cancel', component: CancelPage }
