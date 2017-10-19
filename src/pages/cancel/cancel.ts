@@ -1,3 +1,5 @@
+import { ActivePage } from './../active/active';
+import { CompletePage } from './../complete/complete';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
@@ -23,5 +25,10 @@ export class CancelPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad CancelPage');
   }
-
+  gotoActive() {
+    this.navCtrl.push(ActivePage)
+  }
+  gotoComplete() {
+    this.navCtrl.push(CompletePage)
+  }
 }

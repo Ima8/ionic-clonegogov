@@ -16,10 +16,10 @@
         <ion-segment-button value="active">
           Active
         </ion-segment-button>
-        <ion-segment-button value="completed">
+        <ion-segment-button value="completed" (click)="gotoComplete()">
           Completed
         </ion-segment-button>
-        <ion-segment-button value="cancelled">
+        <ion-segment-button value="cancelled" (click)="gotoCancel()">
           Cancelled
         </ion-segment-button>
       </ion-segment>
@@ -28,7 +28,7 @@
   </ion-header>
   
   <ion-content padding>
-    <ion-list >
+    <ion-list>
       <ion-card>
         <ion-card-content>
           <ion-label class="labelText">
