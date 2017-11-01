@@ -12,6 +12,7 @@ import { CancelPage } from './../pages/cancel/cancel';
 import { PickupPage } from './../pages/pickup/pickup'
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { SMS } from '@ionic-native/sms';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ],
   providers: [
     StatusBar,
+    SMS,
     SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
