@@ -105,6 +105,8 @@ export class HomePage {
   login() {
     this.fb.login(['public_profile', 'user_friends', 'email'])
       .then(res => {
+        console.log("this is login with facebook");
+        console.log(res);
         if (res.status === "connected") {
           this.isLoggedIn = true;
           this.getUserDetail(res.authResponse.userID);

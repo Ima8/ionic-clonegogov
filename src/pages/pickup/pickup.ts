@@ -26,9 +26,9 @@ export class PickupPage {
   }
   loadMap() {
 
-    this.geolocation.getCurrentPosition().then(async (position) => {
+    //this.geolocation.getCurrentPosition().then(async (position) => {
 
-      let latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+      let latLng = new google.maps.LatLng(13.6510942,100.4939486);
 
       let mapOptions = {
         center: latLng,
@@ -36,11 +36,11 @@ export class PickupPage {
         mapTypeId: google.maps.MapTypeId.ROADMAP
       }
 
-      this.map = await new google.maps.Map(this.mapElement.nativeElement, mapOptions);
+      this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
       this.addMarker(this.map)
-    }, (err) => {
-      console.log(err);
-    });
+    // }, (err) => {
+    //   console.log(err);
+    // });
 
   }
   addMarker(map) {
