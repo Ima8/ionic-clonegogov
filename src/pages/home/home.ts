@@ -3,6 +3,8 @@ import { NavController, AlertController } from 'ionic-angular';
 
 import { PickupPage } from '../pickup/pickup'
 import { SMS } from "@ionic-native/sms";
+import { ActionSheetController } from 'ionic-angular'
+
 
 @Component({
   selector: 'page-home',
@@ -10,7 +12,12 @@ import { SMS } from "@ionic-native/sms";
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController,private alertCtrl: AlertController,private sms: SMS) {
+  constructor(
+    public navCtrl: NavController,
+    private alertCtrl: AlertController,
+    private sms: SMS,
+    public actionSheetCtrl: ActionSheetController
+  ) {
 
   }
 
@@ -24,8 +31,37 @@ export class HomePage {
     alert.present();
   }
   invite(){
+    const actionSheet = this.actionSheetCtrl.create({
+      title: 'แนะนำเพื่อนผ่าน.....',
+      buttons: [
+        {
+          text: 'ผ่าน Facebook',
+          handler: () => {
+
+          }
+        },
+        {
+          text: 'ผ่าน SMS',
+          handler: () => {
+            this.showPhone()
+          }
+        },
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          handler: () => {
+            console.log('Cancel clicked');
+          }
+        }
+      ]
+    });
+
+    actionSheet.present();
+
+  }
+  showPhone(){
     const alert = this.alertCtrl.create({
-      title: 'Phone number',
+      title: '"Download ninjavan application at GooglePlay"',
       inputs: [
         {
           name: 'phone',
