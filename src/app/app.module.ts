@@ -17,6 +17,9 @@ import { SocialSharing } from '@ionic-native/social-sharing';
 
 
 import { FirebaseStoreProvider } from '../providers/firebase-store/firebase-store';
+import { Geolocation } from '@ionic-native/geolocation';
+import { GoogleMaps } from '@ionic-native/google-maps';
+import { Facebook } from '@ionic-native/facebook';
 
 @NgModule({
   declarations: [
@@ -47,7 +50,10 @@ import { FirebaseStoreProvider } from '../providers/firebase-store/firebase-stor
     SplashScreen,
     SocialSharing,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
-    FirebaseStoreProvider
+    FirebaseStoreProvider,
+    Geolocation,
+    GoogleMaps,
+    Facebook
   ]
 })
 export class AppModule { }
