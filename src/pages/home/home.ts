@@ -1,3 +1,4 @@
+import { SocialSharing } from '@ionic-native/social-sharing';
 import { Component } from '@angular/core';
 import { NavController, AlertController } from 'ionic-angular';
 
@@ -16,7 +17,8 @@ export class HomePage {
     public navCtrl: NavController,
     private alertCtrl: AlertController,
     private sms: SMS,
-    public actionSheetCtrl: ActionSheetController
+    public actionSheetCtrl: ActionSheetController,
+    private socialSharing: SocialSharing,
   ) {
 
   }
@@ -35,9 +37,9 @@ export class HomePage {
       title: 'แนะนำเพื่อนผ่าน.....',
       buttons: [
         {
-          text: 'ผ่าน Facebook',
+          text: 'ผ่าน Twitter',
           handler: () => {
-
+            this.socialSharing.shareViaTwitter("Download ninjavan application at GooglePlay or http://aipen.io","","")
           }
         },
         {
@@ -59,9 +61,10 @@ export class HomePage {
     actionSheet.present();
 
   }
+
   showPhone(){
     const alert = this.alertCtrl.create({
-      title: '"Download ninjavan application at GooglePlay"',
+      title: '"Download ninjavan application at GooglePlay or http://aipen.io"',
       inputs: [
         {
           name: 'phone',

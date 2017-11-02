@@ -13,6 +13,9 @@ import { PickupPage } from './../pages/pickup/pickup'
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { SMS } from '@ionic-native/sms';
+import { SocialSharing } from '@ionic-native/social-sharing';
+
+
 import { FirebaseStoreProvider } from '../providers/firebase-store/firebase-store';
 
 @NgModule({
@@ -42,6 +45,7 @@ import { FirebaseStoreProvider } from '../providers/firebase-store/firebase-stor
     StatusBar,
     SMS,
     SplashScreen,
+    SocialSharing,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     FirebaseStoreProvider
   ]
