@@ -26,9 +26,11 @@ export class CancelPage {
     console.log('ionViewDidLoad CancelPage');
   }
   gotoActive() {
+    this.navCtrl.pop()
     this.navCtrl.push(ActivePage)
   }
   gotoComplete() {
+    this.navCtrl.pop()
     this.navCtrl.push(CompletePage)
   }
 }

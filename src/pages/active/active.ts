@@ -26,9 +26,11 @@ export class ActivePage {
     console.log('ionViewDidLoad ActivePage');
   }
   gotoComplete() {
+    this.navCtrl.pop()
     this.navCtrl.push(CompletePage)
   }
   gotoCancel() {
+    this.navCtrl.pop()
     this.navCtrl.push(CancelPage)
   }
 }
