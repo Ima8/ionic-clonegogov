@@ -1,6 +1,6 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { ActivePage } from '../active/active'
+import { HistoryPage } from './../history/history';
 import { Geolocation } from '@ionic-native/geolocation';
 import { Marker, MarkerOptions, LatLng } from '@ionic-native/google-maps';
 declare var google;
@@ -22,7 +22,7 @@ export class PickupPage {
     this.loadMap();
   }
   gotoHistory(){
-    this.navCtrl.push(ActivePage)
+    this.navCtrl.push(HistoryPage)
   }
   loadMap() {
 

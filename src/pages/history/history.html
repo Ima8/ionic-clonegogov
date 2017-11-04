@@ -1,0 +1,126 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      <div id="titleText">History</div>
+    </ion-title>
+  </ion-navbar>
+  <ion-navbar>
+    <ion-segment id="navSegment" [(ngModel)]="history" color="whiter">
+      <ion-segment-button value="active">
+        Active
+      </ion-segment-button>
+      <ion-segment-button value="completed">
+        Completed
+      </ion-segment-button>
+      <ion-segment-button value="cancelled">
+        Cancelled
+      </ion-segment-button>
+    </ion-segment>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding [ngSwitch]="history">
+  <ion-list *ngSwitchCase="'active'">
+    <ion-card>
+      <ion-card-content>
+        <ion-label class="labelText">
+          Emma Beaulieu
+        </ion-label>
+        <ion-label text-right>
+          <ion-icon name="send" color="dark"></ion-icon>
+        </ion-label>
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-card-content>
+        <ion-label class="labelText">
+          Alexander Ownsby
+        </ion-label>
+        <ion-label text-right>
+          <ion-icon name="send" color="dark"></ion-icon>
+        </ion-label>
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-card-content>
+        <ion-label class="labelText">
+          James Enis
+        </ion-label>
+        <ion-label text-right>
+          <ion-icon name="send" color="dark"></ion-icon>
+        </ion-label>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+
+  <ion-list *ngSwitchCase="'completed'">
+    <ion-card>
+      <ion-card-content>
+        <ion-label class="labelText">
+          Brandon Rodriguez
+        </ion-label>
+        <ion-label text-right>
+          10.50
+        </ion-label>
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-card-content>
+        <ion-label class="labelText">
+          Juan Chavis
+        </ion-label>
+        <ion-label text-right>
+          10.40
+        </ion-label>
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-card-content>
+        <ion-label class="labelText">
+          Calvin Willingham
+        </ion-label>
+        <ion-label text-right>
+          10.35
+        </ion-label>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+
+  <ion-list *ngSwitchCase="'cancelled'">
+    <ion-card>
+      <ion-card-content>
+        <ion-label class="labelText">
+          Kate Mcfarland
+        </ion-label>
+        <ion-label text-right>
+          <ion-icon name="close" color="dark"></ion-icon>
+        </ion-label>
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-card-content>
+        <ion-label class="labelText">
+          Emily Arnold
+        </ion-label>
+        <ion-label text-right>
+          <ion-icon name="close" color="dark"></ion-icon>
+        </ion-label>
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-card-content>
+        <ion-label class="labelText">
+          Stella Oliver
+        </ion-label>
+        <ion-label text-right>
+          <ion-icon name="close" color="dark"></ion-icon>
+        </ion-label>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+
+</ion-content>

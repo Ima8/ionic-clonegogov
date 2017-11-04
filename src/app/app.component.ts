@@ -4,10 +4,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
-import { ActivePage } from './../pages/active/active';
-import { CompletePage } from './../pages/complete/complete';
-import { CancelPage } from './../pages/cancel/cancel';
 import { PickupPage } from '../pages/pickup/pickup'
+import { HistoryPage } from './../pages/history/history';
 @Component({
   templateUrl: 'app.html'
 })
@@ -25,9 +23,7 @@ export class MyApp {
     this.pages = [
       { title: 'Home', component: HomePage },
       { title: 'Pickup', component: PickupPage },
-      { title: 'Active', component: ActivePage },
-      { title: 'Complete', component: CompletePage },
-      { title: 'Cancel', component: CancelPage }
+      { title: 'History', component: HistoryPage }
     ];
 
   }
