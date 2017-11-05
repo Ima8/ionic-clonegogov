@@ -1,11 +1,10 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController, ToastController } from 'ionic-angular';
 import { HistoryPage } from './../history/history';
 import { Geolocation } from '@ionic-native/geolocation';
 import { Marker, MarkerOptions, LatLng } from '@ionic-native/google-maps';
 declare var google;
 
-@IonicPage()
 @Component({
   selector: 'page-pickup',
   templateUrl: 'pickup.html',
@@ -13,61 +12,56 @@ declare var google;
 export class PickupPage {
   @ViewChild('map') mapElement: ElementRef;
   map: any;
-
-  constructor(public navCtrl: NavController, public navParams: NavParams, public geolocation: Geolocation) {
+  loading: any;
+  constructor(public navCtrl: NavController, public navParams: NavParams, public geolocation: Geolocation, public loadingCtrl: LoadingController, public toastCtrl: ToastController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PickupPage');
     this.loadMap();
   }
-  gotoHistory(){
+  gotoHistory() {
     this.navCtrl.push(HistoryPage)
   }
   loadMap() {
 
-    //this.geolocation.getCurrentPosition().then(async (position) => {
+    let locationOptions = { timeout: 10000, enableHighAccuracy: true };
 
-      let latLng = new google.maps.LatLng(13.6510942,100.4939486);
+    this.geolocation.getCurrentPosition(locationOptions).then(
+      (position) => {
+        let myPos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+        let options = {
+          center: myPos,
+          zoom: 14
+        };
+        this.map = new google.maps.Map(this.mapElement.nativeElement, options);
+        this.addMarker(myPos, "Mein Standort!");
+      },
+      (error) => {
+        this.loading.dismiss().then(() => {
+          this.showToast('Location not found. Please enable your GPS!');
 
-      let mapOptions = {
-        center: latLng,
-        zoom: 15,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
+          console.log(error);
+        });
       }
-
-      this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
-      this.addMarker(this.map)
-    // }, (err) => {
-    //   console.log(err);
-    // });
-
+    )
   }
-  addMarker(map) {
-
-    let marker = new google.maps.Marker({
-      map,
-      animation: google.maps.Animation.DROP,
-      position: map.getCenter()
+  showToast(message) {
+    let toast = this.toastCtrl.create({
+      message: message,
+      duration: 3000
     });
-
-    let content = "<h4>Information!</h4>";
-
-    this.addInfoWindow(marker, content);
-
+    toast.present();
   }
-  addMarker2() {
-
+  addMarker(position, content) {
     let marker = new google.maps.Marker({
       map: this.map,
       animation: google.maps.Animation.DROP,
-      position: this.map.getCenter()
+      position: position
     });
 
-    let content = "<h4>Information!</h4>";
-
     this.addInfoWindow(marker, content);
-
+    return marker;
   }
   addInfoWindow(marker, content) {
 
