@@ -1,55 +1,68 @@
 page-home {
-    #logo {
-        width: 65%;
-        position: absolute;
-        top: 17%;
-        left: 0;
-        right: 0;
-        margin: auto;
-    }
-    #main-content {
-        background-color: #C31432;
-    }
-    .btn-row-1 {
-        width: 100%;
-        text-transform: none;
-        border-color: #FFF;
-        border-width: 100px;
-        background-color: #FFF;
-        color: black;
-    }
-    .btn-row-2 {
-        width: 100%;
-        text-transform: none;
-        background: transparent !important;
-        border-color: #FFF;
-        border-width: 100px;
-    }
-    #row-slide {
-        margin-top: 200px;
-        margin-bottom: 120px;
-    }
-    .row-btn {
-        margin-top: 10px;
-        margin: 0 auto;
-    }
-    .no-scroll .scroll-content {
-        overflow: hidden;
-    }
-    .slide {
-        margin-top: 30px;
-        padding-left: 20px;
-        padding-right: 20px;
-        font-size: 25px;
-        font-weight: bold;
-        color: #FFF;
-    }
-    .toolbar-background {
-        background-color: #C31432;
-    }
-    .facebook {
-        background-color: #4267b2 !important;
-    }
+  #logo {
+      width: 65%;
+      position: absolute;
+      top: 17%;
+      left: 0;
+      right: 0;
+      margin: auto;
+  }
+  #main-content {
+      background-color: #C31432;
+  }
+  .btn-row-1 {
+      width: 100%;
+      text-transform: none;
+      border-color: #FFF;
+      border-width: 100px;
+      background-color: #FFF;
+      color: black;
+  }
+  .btn-row-2 {
+      width: 100%;
+      text-transform: none;
+      background: transparent !important;
+      border-color: #FFF;
+      border-width: 100px;
+  }
+  #row-slide {
+      margin-top: 200px;
+      margin-bottom: 120px;
+  }
+  .row-btn {
+      margin-top: 10px;
+      margin: 0 auto;
+  }
+  .no-scroll .scroll-content {
+      overflow: hidden;
+  }
+  .slide {
+      margin-top: 30px;
+      padding-left: 20px;
+      padding-right: 20px;
+      font-size: 25px;
+      font-weight: bold;
+      color: #FFF;
+  }
+  .toolbar-background {
+      background-color: #C31432;
+  }
+  .facebook {
+      background-color: #4267b2 !important;
+  }
+  #welcome {
+    margin-top: 50px;
+    text-align: center;
+  }
+  #logoLogin {
+      width: 65%;
+      height: 100%;
+      left: 0;
+      right: 0;
+      margin-top: 20px;
+      margin-left: auto;
+      margin-right: auto;
+  }
 }
 
 .alertDanger {

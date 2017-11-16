@@ -8,26 +8,49 @@
 </ion-header> -->
 
 <ion-content class="no-scroll" padding id="main-content">
+  
+  <div *ngIf="isLoggedIn; else facebookLogin">
     <ion-row>
-        <img id="logo" src="./assets/img/ninjavan-logo-print.png">
+      <img id="logoLogin" src="./assets/img/ninjavan-logo-print.png">
+    </ion-row>
+    <ion-row>
+      <div>
+        <h2 id="welcome">Hi, {{users.name}} ({{users.email}})</h2>
+        <p>
+          <img src="{{users.picture.data.url}}" width="100" alt="{{users.name}}" />
+        </p>
+        <p>
+          <button ion-button icon-right (click)="gotoPickup()">
+            Go ninjavan
+          </button>
+          <button ion-button icon-right (click)="logout()">
+            Logout
+          </button>
+        </p>
+      </div>
+    </ion-row>
+  </div>
+  <ng-template #facebookLogin>
+    <ion-row>
+      <img id="logo" src="./assets/img/ninjavan-logo-print.png">
     </ion-row>
     <ion-row id="row-slide">
-        <ion-slides autoplay="500" loop="true" speed="2000">
-            <ion-slide class="slide">
-                <p> We deliver to anywhere in Thailand </p>
-            </ion-slide>
-            <ion-slide class="slide">
-                <p> We bring the post officce to you </p>
-            </ion-slide>
-            <ion-slide class="slide">
-                <p> No minimum parcels per pickup </p>
-            </ion-slide>
-        </ion-slides>
+      <ion-slides autoplay="500" loop="true" speed="2000">
+        <ion-slide class="slide">
+          <p> We deliver to anywhere in Thailand </p>
+        </ion-slide>
+        <ion-slide class="slide">
+          <p> We bring the post officce to you </p>
+        </ion-slide>
+        <ion-slide class="slide">
+          <p> No minimum parcels per pickup </p>
+        </ion-slide>
+      </ion-slides>
     </ion-row>
-
-
+  </ng-template>
 </ion-content>
-<ion-footer style="background-color: #C31432;">
+<ion-footer style="background-color: #C31432;" [hidden]="isLoggedIn">
+
     <ion-toolbar style="background-color: #C31432;">
         <ion-row text-center class="row-btn" (click)="gotoPickup()">
             <ion-col>
